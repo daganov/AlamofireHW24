@@ -11,8 +11,11 @@ struct CharacterList: View {
     @EnvironmentObject var modelData: ModelData
 
     var body: some View {
-        List(modelData.characters, id: \.id) { character in
-            CharacterRow(character: character)
+        NavigationView {
+            List(modelData.characters, id: \.id) { character in
+                CharacterRow(character: character)
+            }
+            .navigationTitle("Characters")
         }
     }
 }
