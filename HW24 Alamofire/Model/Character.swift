@@ -16,9 +16,22 @@ struct Character: Decodable {
     let name: String
     let description: String
     let thumbnail: ImageURL
+    var thumbPath: String {
+        ModelData().makeMarvelRequestUrl(from: thumbnail.path)
+    }
     
     struct ImageURL: Decodable {
         let path: String
+    }
+    
+    var image: Image {
+        guard let imageURL = URL(string: thumbPath),
+              let imageData = try? Data(contentsOf: imageURL),
+              let image = UIImage(data: imageData)
+        else {
+            return Image(systemName: "square-image")
+        }
+        return Image(uiImage: image)
     }
 }
 

@@ -54,4 +54,8 @@ final class ModelData: ObservableObject {
         }
         return newRequestURL
     }
+    
+    func makeMarvelRequestUrl(from path: String) -> String {
+        makeRequestUrl(domain: path, path: "", queryItems: nil).absoluteString
+    }
 }
