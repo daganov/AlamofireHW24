@@ -12,6 +12,7 @@
 		8B28DA9627AA8665004CA28C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DA9527AA8665004CA28C /* ContentView.swift */; };
 		8B28DA9827AA8666004CA28C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B28DA9727AA8666004CA28C /* Assets.xcassets */; };
 		8B28DA9B27AA8666004CA28C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B28DA9A27AA8666004CA28C /* Preview Assets.xcassets */; };
+		8B28DAA627AA8B15004CA28C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAA527AA8B15004CA28C /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8B28DA9527AA8665004CA28C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8B28DA9727AA8666004CA28C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B28DA9A27AA8666004CA28C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B28DAA527AA8B15004CA28C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		BBF474A9E1C6B9A35330DA4A /* Pods-HW24 Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24 Alamofire.release.xcconfig"; path = "Target Support Files/Pods-HW24 Alamofire/Pods-HW24 Alamofire.release.xcconfig"; sourceTree = "<group>"; };
 		F74C4C9D6C765376BDEA8ABA /* Pods-HW24 Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24 Alamofire.debug.xcconfig"; path = "Target Support Files/Pods-HW24 Alamofire/Pods-HW24 Alamofire.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 		8B28DA9227AA8665004CA28C /* HW24 Alamofire */ = {
 			isa = PBXGroup;
 			children = (
+				8B28DAA127AA8A6D004CA28C /* Model */,
 				8B28DA9327AA8665004CA28C /* HW24_AlamofireApp.swift */,
 				8B28DA9527AA8665004CA28C /* ContentView.swift */,
 				8B28DA9727AA8666004CA28C /* Assets.xcassets */,
@@ -74,13 +77,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8B28DAA127AA8A6D004CA28C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B28DAA527AA8B15004CA28C /* Character.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9EAE42C7B18DBA7EE6D1975F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				F74C4C9D6C765376BDEA8ABA /* Pods-HW24 Alamofire.debug.xcconfig */,
 				BBF474A9E1C6B9A35330DA4A /* Pods-HW24 Alamofire.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -188,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B28DAA627AA8B15004CA28C /* Character.swift in Sources */,
 				8B28DA9627AA8665004CA28C /* ContentView.swift in Sources */,
 				8B28DA9427AA8665004CA28C /* HW24_AlamofireApp.swift in Sources */,
 			);
