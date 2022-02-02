@@ -13,6 +13,9 @@
 		8B28DA9827AA8666004CA28C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B28DA9727AA8666004CA28C /* Assets.xcassets */; };
 		8B28DA9B27AA8666004CA28C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B28DA9A27AA8666004CA28C /* Preview Assets.xcassets */; };
 		8B28DAA627AA8B15004CA28C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAA527AA8B15004CA28C /* Character.swift */; };
+		8B28DAA827AAA271004CA28C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAA727AAA271004CA28C /* ModelData.swift */; };
+		8B28DAAA27AAB02E004CA28C /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAA927AAB02E004CA28C /* AppSettings.swift */; };
+		8B28DAAC27AAB076004CA28C /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAAB27AAB076004CA28C /* MD5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		8B28DA9727AA8666004CA28C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B28DA9A27AA8666004CA28C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B28DAA527AA8B15004CA28C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		8B28DAA727AAA271004CA28C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		8B28DAA927AAB02E004CA28C /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		8B28DAAB27AAB076004CA28C /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
 		BBF474A9E1C6B9A35330DA4A /* Pods-HW24 Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24 Alamofire.release.xcconfig"; path = "Target Support Files/Pods-HW24 Alamofire/Pods-HW24 Alamofire.release.xcconfig"; sourceTree = "<group>"; };
 		F74C4C9D6C765376BDEA8ABA /* Pods-HW24 Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24 Alamofire.debug.xcconfig"; path = "Target Support Files/Pods-HW24 Alamofire/Pods-HW24 Alamofire.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +71,8 @@
 				8B28DA9527AA8665004CA28C /* ContentView.swift */,
 				8B28DA9727AA8666004CA28C /* Assets.xcassets */,
 				8B28DA9927AA8666004CA28C /* Preview Content */,
+				8B28DAA927AAB02E004CA28C /* AppSettings.swift */,
+				8B28DAAB27AAB076004CA28C /* MD5.swift */,
 			);
 			path = "HW24 Alamofire";
 			sourceTree = "<group>";
@@ -81,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				8B28DAA527AA8B15004CA28C /* Character.swift */,
+				8B28DAA727AAA271004CA28C /* ModelData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,7 +208,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B28DAA627AA8B15004CA28C /* Character.swift in Sources */,
+				8B28DAA827AAA271004CA28C /* ModelData.swift in Sources */,
+				8B28DAAC27AAB076004CA28C /* MD5.swift in Sources */,
 				8B28DA9627AA8665004CA28C /* ContentView.swift in Sources */,
+				8B28DAAA27AAB02E004CA28C /* AppSettings.swift in Sources */,
 				8B28DA9427AA8665004CA28C /* HW24_AlamofireApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

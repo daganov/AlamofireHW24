@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct Characters: Decodable {
-    let character: [Character]
+    var characters: [Character]
 }
+
 struct Character: Decodable {
     let id: Int
     let name: String
