@@ -36,7 +36,8 @@ struct Character: Decodable {
         "\(thumbnail.path)/landscape_small.\(thumbnail.extension)"
     }
     var largeImagePath: String {
-        "\(thumbnail.path)/landscape_incredible.\(thumbnail.extension)"
+        "\(thumbnail.path)/detail.\(thumbnail.extension)"
+//        "\(thumbnail.path)/landscape_incredible.\(thumbnail.extension)"
     }
     // API Documentation https://developer.marvel.com/documentation/images
     
