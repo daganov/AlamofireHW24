@@ -16,11 +16,11 @@ final class ModelData: ObservableObject {
                                         path: MarvelAccount.requestURL,
                                         queryItems: nil)
         let request = AF.request(url_marvel)
-        request.responseDecodable(of: Characters.self) { [self] data in
-            guard let item = data.value else {
+        request.responseDecodable(of: MarvelResponse.self) { [self] data in
+            guard let item = data.value?.data.results else {
                 fatalError("Couldn't load data in.")
             }
-            characters = item.characters
+            characters = item
             // вызов обновления таблицы
         }
     }
