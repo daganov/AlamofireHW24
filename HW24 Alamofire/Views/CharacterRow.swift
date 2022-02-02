@@ -12,10 +12,16 @@ struct CharacterRow: View {
     
     var body: some View {
         HStack {
-            character.image
-                .resizable()
-                .frame(width: 50, height: 50)
-            Text(character.name)
+            CharacterImage(character: character)
+            
+            VStack(alignment: .leading) {
+                Text(character.name)
+                    .font(.title2)
+                    .lineLimit(1)
+                Text("Комиксов: \(character.comics.available)")
+                    .font(.subheadline)
+                    .foregroundColor(Color(uiColor: .systemGray))
+            }
             
             Spacer()
         }
@@ -26,6 +32,7 @@ struct CharacterRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CharacterRow(character: charactersExample[0])
+                .preferredColorScheme(.dark)
             CharacterRow(character: charactersExample[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
