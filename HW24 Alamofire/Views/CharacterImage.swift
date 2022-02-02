@@ -15,7 +15,7 @@ struct CharacterImage: View {
             .resizable()
             .foregroundColor(Color(uiColor: .quaternarySystemFill))
             .frame(width: 80, height: 60)
-            .cornerRadius(4)
+            .cornerRadius(8)
     }
 }
 
