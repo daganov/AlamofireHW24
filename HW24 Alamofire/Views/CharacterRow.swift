@@ -9,14 +9,15 @@ import SwiftUI
 
 struct CharacterRow: View {
     var character: Character
-    
+    @State private var showingDetails = false
+
     var body: some View {
         HStack {
             CharacterImage(character: character)
             
             VStack(alignment: .leading) {
                 Text(character.name)
-                    .font(.title2)
+                    .font(.system(size: 18, weight: .bold))
                     .lineLimit(1)
                 Text("Комиксов: \(character.comics.available)")
                     .font(.subheadline)
@@ -24,6 +25,12 @@ struct CharacterRow: View {
             }
             
             Spacer()
+        }
+        .onTapGesture {
+            showingDetails.toggle()
+        }
+        .sheet(isPresented: $showingDetails) {
+            CharacterDetail(character: character)
         }
     }
 }

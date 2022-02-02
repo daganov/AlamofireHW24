@@ -19,6 +19,7 @@
 		8B28DAB027AAB659004CA28C /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAAF27AAB659004CA28C /* CharacterRow.swift */; };
 		8B28DAB227AABFB4004CA28C /* CharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAB127AABFB4004CA28C /* CharacterList.swift */; };
 		8B28DAB427AADD9B004CA28C /* CharacterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAB327AADD9B004CA28C /* CharacterImage.swift */; };
+		8BC1FD8F27AB027B0078BFFD /* CharacterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1FD8E27AB027B0078BFFD /* CharacterDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8B28DAB127AABFB4004CA28C /* CharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterList.swift; sourceTree = "<group>"; };
 		8B28DAB327AADD9B004CA28C /* CharacterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImage.swift; sourceTree = "<group>"; };
 		8BC1FD8D27AAED3C0078BFFD /* HW24-Alamofire-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HW24-Alamofire-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8BC1FD8E27AB027B0078BFFD /* CharacterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetail.swift; sourceTree = "<group>"; };
 		BBF474A9E1C6B9A35330DA4A /* Pods-HW24 Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24 Alamofire.release.xcconfig"; path = "Target Support Files/Pods-HW24 Alamofire/Pods-HW24 Alamofire.release.xcconfig"; sourceTree = "<group>"; };
 		F74C4C9D6C765376BDEA8ABA /* Pods-HW24 Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24 Alamofire.debug.xcconfig"; path = "Target Support Files/Pods-HW24 Alamofire/Pods-HW24 Alamofire.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 				8B28DAAF27AAB659004CA28C /* CharacterRow.swift */,
 				8B28DAB127AABFB4004CA28C /* CharacterList.swift */,
 				8B28DAB327AADD9B004CA28C /* CharacterImage.swift */,
+				8BC1FD8E27AB027B0078BFFD /* CharacterDetail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			files = (
 				8B28DAA627AA8B15004CA28C /* Character.swift in Sources */,
 				8B28DAA827AAA271004CA28C /* ModelData.swift in Sources */,
+				8BC1FD8F27AB027B0078BFFD /* CharacterDetail.swift in Sources */,
 				8B28DAAC27AAB076004CA28C /* MD5.swift in Sources */,
 				8B28DAB427AADD9B004CA28C /* CharacterImage.swift in Sources */,
 				8B28DA9627AA8665004CA28C /* ContentView.swift in Sources */,
