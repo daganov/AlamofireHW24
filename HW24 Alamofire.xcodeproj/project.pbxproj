@@ -16,6 +16,7 @@
 		8B28DAA827AAA271004CA28C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAA727AAA271004CA28C /* ModelData.swift */; };
 		8B28DAAA27AAB02E004CA28C /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAA927AAB02E004CA28C /* AppSettings.swift */; };
 		8B28DAAC27AAB076004CA28C /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAAB27AAB076004CA28C /* MD5.swift */; };
+		8B28DAB027AAB659004CA28C /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAAF27AAB659004CA28C /* CharacterRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8B28DAA727AAA271004CA28C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		8B28DAA927AAB02E004CA28C /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		8B28DAAB27AAB076004CA28C /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
+		8B28DAAF27AAB659004CA28C /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
 		BBF474A9E1C6B9A35330DA4A /* Pods-HW24 Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24 Alamofire.release.xcconfig"; path = "Target Support Files/Pods-HW24 Alamofire/Pods-HW24 Alamofire.release.xcconfig"; sourceTree = "<group>"; };
 		F74C4C9D6C765376BDEA8ABA /* Pods-HW24 Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24 Alamofire.debug.xcconfig"; path = "Target Support Files/Pods-HW24 Alamofire/Pods-HW24 Alamofire.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +70,7 @@
 			children = (
 				8B28DAA127AA8A6D004CA28C /* Model */,
 				8B28DA9327AA8665004CA28C /* HW24_AlamofireApp.swift */,
-				8B28DA9527AA8665004CA28C /* ContentView.swift */,
+				8B28DAAE27AAB644004CA28C /* Views */,
 				8B28DA9727AA8666004CA28C /* Assets.xcassets */,
 				8B28DA9927AA8666004CA28C /* Preview Content */,
 				8B28DAA927AAB02E004CA28C /* AppSettings.swift */,
@@ -92,6 +94,15 @@
 				8B28DAA727AAA271004CA28C /* ModelData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8B28DAAE27AAB644004CA28C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B28DA9527AA8665004CA28C /* ContentView.swift */,
+				8B28DAAF27AAB659004CA28C /* CharacterRow.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9EAE42C7B18DBA7EE6D1975F /* Pods */ = {
@@ -212,6 +223,7 @@
 				8B28DAAC27AAB076004CA28C /* MD5.swift in Sources */,
 				8B28DA9627AA8665004CA28C /* ContentView.swift in Sources */,
 				8B28DAAA27AAB02E004CA28C /* AppSettings.swift in Sources */,
+				8B28DAB027AAB659004CA28C /* CharacterRow.swift in Sources */,
 				8B28DA9427AA8665004CA28C /* HW24_AlamofireApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
