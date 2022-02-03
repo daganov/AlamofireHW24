@@ -53,6 +53,11 @@ struct CharacterDetail: View {
                     } placeholder: {
                         ProgressView()
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .overlay {
+                        Color.white
+                            .opacity(0.4)
+                    }
                 } else {
                     RadialGradient(gradient: Gradient(colors: [.red, .black]),
                                    center: .center,
