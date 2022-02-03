@@ -7,22 +7,43 @@
 
 import Foundation
 import Alamofire
+import Combine
 
 final class ModelData: ObservableObject {
     @Published var characters = [Character]()
+    @Published var searchText = ""
+    var publisher: AnyCancellable?
 
-    init() {
-        let url_marvel = makeRequestUrl(domain: MarvelAccount.serverURL,
-                                        path: MarvelAccount.requestURL,
-                                        queryItems: nil)
+    fileprivate func getCharacterList(from url_marvel: URL) {
         let request = AF.request(url_marvel)
         request.responseDecodable(of: MarvelResponse.self) { [self] data in
             guard let item = data.value?.data.results else {
                 fatalError("Couldn't load data in.")
             }
             characters = item
-            // вызов обновления таблицы
         }
+    }
+    
+    init() {
+        let url_marvel = makeRequestUrl(domain: MarvelAccount.serverURL,
+                                        path: MarvelAccount.requestURL,
+                                        queryItems: nil)
+        getCharacterList(from: url_marvel)
+        
+        publisher = $searchText
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { [self] str in
+                let url: URL
+                if !self.searchText.isEmpty {
+                    url = makeRequestUrl(domain: MarvelAccount.serverURL,
+                                         path: MarvelAccount.requestURL,
+                                         queryItems: [URLQueryItem(name: "nameStartsWith", value: str)]
+                    )
+                } else {
+                    url = url_marvel
+                }
+                getCharacterList(from: url)
+            })
     }
     
     private func makeRequestUrl(domain: String, path: String, queryItems: [URLQueryItem]?) -> URL {
@@ -30,11 +51,7 @@ final class ModelData: ObservableObject {
             fatalError("Cannot create URL.")
         }
         let requestURL: URL
-        if path.isEmpty {
-            requestURL = baseURL
-        } else {
-            requestURL = baseURL.appendingPathComponent(path)
-        }
+        requestURL = path.isEmpty ? baseURL : baseURL.appendingPathComponent(path)
         
         // Marvel token
         let timestamp = String(NSDate().timeIntervalSince1970)
