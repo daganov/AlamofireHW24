@@ -41,10 +41,6 @@ struct Character: Decodable {
     }
     // API Documentation https://developer.marvel.com/documentation/images
     
-    var smallImage: Image {
-        getImage(path: smallImagePath) ?? Image(systemName: "photo")
-    }
-    
     var largeImage: Image? {
         getImage(path: largeImagePath)
     }

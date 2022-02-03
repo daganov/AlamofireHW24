@@ -11,11 +11,13 @@ struct CharacterImage: View {
     var character: Character
     
     var body: some View {
-        character.smallImage
-            .resizable()
-            .foregroundColor(Color(uiColor: .quaternarySystemFill))
-            .frame(width: 80, height: 60)
-            .cornerRadius(8)
+        AsyncImage(url: URL(string: character.smallImagePath)) { image in
+            image.resizable()
+        } placeholder: {
+            ProgressView()
+        }
+        .frame(width: 80, height: 60)
+        .cornerRadius(8)
     }
 }
 
