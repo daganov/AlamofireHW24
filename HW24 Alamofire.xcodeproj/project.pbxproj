@@ -8,19 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		5EE083B3615D1CAA70381287 /* libPods-HW24 Alamofire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55862B19381425BC41974EE5 /* libPods-HW24 Alamofire.a */; };
+		8B1A635927AC2AEA0026602E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1A635827AC2AEA0026602E /* LaunchScreen.storyboard */; };
 		8B28DA9427AA8665004CA28C /* HW24_AlamofireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DA9327AA8665004CA28C /* HW24_AlamofireApp.swift */; };
 		8B28DA9627AA8665004CA28C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DA9527AA8665004CA28C /* ContentView.swift */; };
 		8B28DA9827AA8666004CA28C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B28DA9727AA8666004CA28C /* Assets.xcassets */; };
 		8B28DA9B27AA8666004CA28C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B28DA9A27AA8666004CA28C /* Preview Assets.xcassets */; };
+		8B28DAA627AA8B15004CA28C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAA527AA8B15004CA28C /* Character.swift */; };
+		8B28DAA827AAA271004CA28C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAA727AAA271004CA28C /* ModelData.swift */; };
+		8B28DAAA27AAB02E004CA28C /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAA927AAB02E004CA28C /* AppSettings.swift */; };
+		8B28DAAC27AAB076004CA28C /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAAB27AAB076004CA28C /* MD5.swift */; };
+		8B28DAB027AAB659004CA28C /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAAF27AAB659004CA28C /* CharacterRow.swift */; };
+		8B28DAB227AABFB4004CA28C /* CharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAB127AABFB4004CA28C /* CharacterList.swift */; };
+		8B28DAB427AADD9B004CA28C /* CharacterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DAB327AADD9B004CA28C /* CharacterImage.swift */; };
+		8BC1FD8F27AB027B0078BFFD /* CharacterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1FD8E27AB027B0078BFFD /* CharacterDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55862B19381425BC41974EE5 /* libPods-HW24 Alamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HW24 Alamofire.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B1A635827AC2AEA0026602E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B28DA9027AA8665004CA28C /* HW24 Alamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW24 Alamofire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B28DA9327AA8665004CA28C /* HW24_AlamofireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW24_AlamofireApp.swift; sourceTree = "<group>"; };
 		8B28DA9527AA8665004CA28C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8B28DA9727AA8666004CA28C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B28DA9A27AA8666004CA28C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B28DAA527AA8B15004CA28C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		8B28DAA727AAA271004CA28C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		8B28DAA927AAB02E004CA28C /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		8B28DAAB27AAB076004CA28C /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
+		8B28DAAF27AAB659004CA28C /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
+		8B28DAB127AABFB4004CA28C /* CharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterList.swift; sourceTree = "<group>"; };
+		8B28DAB327AADD9B004CA28C /* CharacterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImage.swift; sourceTree = "<group>"; };
+		8BC1FD8D27AAED3C0078BFFD /* HW24-Alamofire-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HW24-Alamofire-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8BC1FD8E27AB027B0078BFFD /* CharacterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetail.swift; sourceTree = "<group>"; };
 		BBF474A9E1C6B9A35330DA4A /* Pods-HW24 Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24 Alamofire.release.xcconfig"; path = "Target Support Files/Pods-HW24 Alamofire/Pods-HW24 Alamofire.release.xcconfig"; sourceTree = "<group>"; };
 		F74C4C9D6C765376BDEA8ABA /* Pods-HW24 Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24 Alamofire.debug.xcconfig"; path = "Target Support Files/Pods-HW24 Alamofire/Pods-HW24 Alamofire.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,10 +77,14 @@
 		8B28DA9227AA8665004CA28C /* HW24 Alamofire */ = {
 			isa = PBXGroup;
 			children = (
+				8BC1FD8D27AAED3C0078BFFD /* HW24-Alamofire-Info.plist */,
 				8B28DA9327AA8665004CA28C /* HW24_AlamofireApp.swift */,
-				8B28DA9527AA8665004CA28C /* ContentView.swift */,
+				8B28DAA127AA8A6D004CA28C /* Model */,
+				8B28DAAE27AAB644004CA28C /* Views */,
 				8B28DA9727AA8666004CA28C /* Assets.xcassets */,
 				8B28DA9927AA8666004CA28C /* Preview Content */,
+				8B28DAA927AAB02E004CA28C /* AppSettings.swift */,
+				8B28DAAB27AAB076004CA28C /* MD5.swift */,
 			);
 			path = "HW24 Alamofire";
 			sourceTree = "<group>";
@@ -74,13 +97,34 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8B28DAA127AA8A6D004CA28C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B28DAA527AA8B15004CA28C /* Character.swift */,
+				8B28DAA727AAA271004CA28C /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B28DAAE27AAB644004CA28C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B28DA9527AA8665004CA28C /* ContentView.swift */,
+				8B28DAAF27AAB659004CA28C /* CharacterRow.swift */,
+				8B28DAB127AABFB4004CA28C /* CharacterList.swift */,
+				8B28DAB327AADD9B004CA28C /* CharacterImage.swift */,
+				8BC1FD8E27AB027B0078BFFD /* CharacterDetail.swift */,
+				8B1A635827AC2AEA0026602E /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9EAE42C7B18DBA7EE6D1975F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				F74C4C9D6C765376BDEA8ABA /* Pods-HW24 Alamofire.debug.xcconfig */,
 				BBF474A9E1C6B9A35330DA4A /* Pods-HW24 Alamofire.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B1A635927AC2AEA0026602E /* LaunchScreen.storyboard in Resources */,
 				8B28DA9B27AA8666004CA28C /* Preview Assets.xcassets in Resources */,
 				8B28DA9827AA8666004CA28C /* Assets.xcassets in Resources */,
 			);
@@ -188,8 +233,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B28DAA627AA8B15004CA28C /* Character.swift in Sources */,
+				8B28DAA827AAA271004CA28C /* ModelData.swift in Sources */,
+				8BC1FD8F27AB027B0078BFFD /* CharacterDetail.swift in Sources */,
+				8B28DAAC27AAB076004CA28C /* MD5.swift in Sources */,
+				8B28DAB427AADD9B004CA28C /* CharacterImage.swift in Sources */,
 				8B28DA9627AA8665004CA28C /* ContentView.swift in Sources */,
+				8B28DAAA27AAB02E004CA28C /* AppSettings.swift in Sources */,
+				8B28DAB027AAB659004CA28C /* CharacterRow.swift in Sources */,
 				8B28DA9427AA8665004CA28C /* HW24_AlamofireApp.swift in Sources */,
+				8B28DAB227AABFB4004CA28C /* CharacterList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,9 +377,10 @@
 				DEVELOPMENT_TEAM = WBW8CNKU89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HW24-Alamofire-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,7 +392,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -354,9 +408,10 @@
 				DEVELOPMENT_TEAM = WBW8CNKU89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HW24-Alamofire-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -368,7 +423,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
