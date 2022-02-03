@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5EE083B3615D1CAA70381287 /* libPods-HW24 Alamofire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55862B19381425BC41974EE5 /* libPods-HW24 Alamofire.a */; };
+		8B1A635927AC2AEA0026602E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1A635827AC2AEA0026602E /* LaunchScreen.storyboard */; };
 		8B28DA9427AA8665004CA28C /* HW24_AlamofireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DA9327AA8665004CA28C /* HW24_AlamofireApp.swift */; };
 		8B28DA9627AA8665004CA28C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28DA9527AA8665004CA28C /* ContentView.swift */; };
 		8B28DA9827AA8666004CA28C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B28DA9727AA8666004CA28C /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		55862B19381425BC41974EE5 /* libPods-HW24 Alamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HW24 Alamofire.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B1A635827AC2AEA0026602E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B28DA9027AA8665004CA28C /* HW24 Alamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW24 Alamofire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B28DA9327AA8665004CA28C /* HW24_AlamofireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW24_AlamofireApp.swift; sourceTree = "<group>"; };
 		8B28DA9527AA8665004CA28C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				8B28DAB127AABFB4004CA28C /* CharacterList.swift */,
 				8B28DAB327AADD9B004CA28C /* CharacterImage.swift */,
 				8BC1FD8E27AB027B0078BFFD /* CharacterDetail.swift */,
+				8B1A635827AC2AEA0026602E /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B1A635927AC2AEA0026602E /* LaunchScreen.storyboard in Resources */,
 				8B28DA9B27AA8666004CA28C /* Preview Assets.xcassets in Resources */,
 				8B28DA9827AA8666004CA28C /* Assets.xcassets in Resources */,
 			);
@@ -376,7 +380,7 @@
 				INFOPLIST_FILE = "HW24-Alamofire-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -407,7 +411,7 @@
 				INFOPLIST_FILE = "HW24-Alamofire-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
