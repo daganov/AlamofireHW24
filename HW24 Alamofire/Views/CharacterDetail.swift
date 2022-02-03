@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CharacterDetail: View {
     var character: Character
-    @State var isBackground = true
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -28,7 +27,6 @@ struct CharacterDetail: View {
                     .foregroundColor(.black.opacity(0.4))
                     .frame(width: 36, height: 5)
                     .padding(.top, 8)
-
             }
             ScrollView(.vertical, showsIndicators: true) {
                 VStack(alignment: .leading, spacing: 0) {
@@ -43,16 +41,18 @@ struct CharacterDetail: View {
                     
                     Text(character.description.isEmpty ? "No description" : character.description)
                 }
-                .foregroundColor(isBackground ? .white : .black)
+                .foregroundColor(character.isImageExist ? .black : .white)
                 .padding(.horizontal)
             }
         }
         .background(
             VStack(spacing: 0) {
-                if let image = character.largeImage {
-                    image
-                        .resizable()
-                        .blur(radius: 100)
+                if character.isImageExist {
+                    AsyncImage(url: URL(string: character.largeImagePath)) { image in
+                        image.blur(radius: 100)
+                    } placeholder: {
+                        ProgressView()
+                    }
                 } else {
                     RadialGradient(gradient: Gradient(colors: [.red, .black]),
                                    center: .center,
@@ -62,11 +62,7 @@ struct CharacterDetail: View {
             }
         )
         .ignoresSafeArea(edges: [.bottom])
-        .onAppear() {
-            isBackground = character.largeImage == nil
-        }
     }
-    
 }
 
 struct CharacterDetail_Previews: PreviewProvider {

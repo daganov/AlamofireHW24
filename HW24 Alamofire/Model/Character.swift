@@ -37,25 +37,11 @@ struct Character: Decodable {
     }
     var largeImagePath: String {
         "\(thumbnail.path)/detail.\(thumbnail.extension)"
-//        "\(thumbnail.path)/landscape_incredible.\(thumbnail.extension)"
     }
     // API Documentation https://developer.marvel.com/documentation/images
     
-    var largeImage: Image? {
-        getImage(path: largeImagePath)
-    }
-    
-    func getImage(path: String) -> Image? {
-        if path.contains("image_not_available") {
-            return nil
-        }
-        guard let imageURL = URL(string: path),
-              let imageData = try? Data(contentsOf: imageURL),
-              let image = UIImage(data: imageData)
-        else {
-            return nil
-        }
-        return Image(uiImage: image)
+    var isImageExist: Bool {
+        !thumbnail.path.contains("image_not_available")
     }
 }
 
