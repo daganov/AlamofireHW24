@@ -16,6 +16,10 @@ struct CharacterList: View {
                 CharacterRow(character: character)
             }
             .navigationTitle("Characters")
+            .searchable(text: $modelData.searchText,
+                        placement: .navigationBarDrawer(displayMode: .automatic),
+                        prompt: "Найти супергероя"
+            )
         }
     }
 }
@@ -23,5 +27,6 @@ struct CharacterList: View {
 struct CharacterList_Previews: PreviewProvider {
     static var previews: some View {
         CharacterList()
+            .environmentObject(ModelData())
     }
 }
