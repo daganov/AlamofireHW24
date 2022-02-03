@@ -23,9 +23,6 @@ struct ContentView: View {
             }
             
             CharacterList()
-//            Rectangle()
-//                .frame(height: 550)
-//                .foregroundColor(.green)
             
             Spacer()
         }

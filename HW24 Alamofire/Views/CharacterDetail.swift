@@ -14,13 +14,16 @@ struct CharacterDetail: View {
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             ZStack(alignment: .top) {
-                if let image = character.largeImage {
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(height: 200, alignment: .center)
-                        .clipped()
+                AsyncImage(url: URL(string: character.largeImagePath)) { image in
+                    image.resizable()
+                    image.aspectRatio(contentMode: .fill)
+                } placeholder: {
+                    ProgressView()
                 }
+                .frame(height: 200, alignment: .center)
+                .clipped()
+                .cornerRadius(8)
+                
                 Capsule()
                     .foregroundColor(.black.opacity(0.4))
                     .frame(width: 36, height: 5)
