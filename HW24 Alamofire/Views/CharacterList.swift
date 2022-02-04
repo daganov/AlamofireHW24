@@ -29,7 +29,9 @@ struct CharacterList: View {
                     List(modelData.characters, id: \.id) { character in
                         CharacterRow(character: character)
                             .onAppear {
-                                modelData.loadMoreIfNeeded(character)
+                                if modelData.searchText.isEmpty {
+                                    modelData.loadMoreIfNeeded(character)
+                                }
                             }
                     }
                     .navigationTitle("Characters")
