@@ -26,6 +26,7 @@ struct CharacterRow: View {
             
             Spacer()
         }
+        .contentShape(Rectangle())
         .onTapGesture {
             showingDetails.toggle()
         }
