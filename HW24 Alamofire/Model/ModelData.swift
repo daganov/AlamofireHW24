@@ -12,43 +12,68 @@ import Combine
 final class ModelData: ObservableObject {
     @Published var characters = [Character]()
     @Published var searchText = ""
-    var publisher: AnyCancellable?
+    @Published var showingAlert = false
+    @Published var alertType: AlertType? = nil
 
+    var publisher: AnyCancellable?
+    var urlMarvel: URL?
+
+    enum AlertType: String {
+        case connection = "Похоже, проблема с интернетом"
+        case url = "Проблема с получением данных"
+        case token = "Проблема с доступом к данным"
+    }
+    
     fileprivate func getCharacterList(from url_marvel: URL) {
         let request = AF.request(url_marvel)
         request.responseDecodable(of: MarvelResponse.self) { [self] data in
             guard let item = data.value?.data.results else {
-                fatalError("Couldn't load data in.")
+                alertType = .connection
+                showingAlert = true
+                characters.removeAll()
+                return
             }
             characters = item
         }
     }
     
     init() {
-        let url_marvel = makeRequestUrl(domain: MarvelAccount.serverURL,
-                                        path: MarvelAccount.requestURL,
-                                        queryItems: nil)
-        getCharacterList(from: url_marvel)
+        urlMarvel = makeRequestUrl(domain: MarvelAccount.serverURL,
+                                   path: MarvelAccount.requestURL,
+                                   queryItems: nil)
+        
+        loadData()
         
         publisher = $searchText
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [self] str in
-                let url: URL
+                let url: URL?
                 if !self.searchText.isEmpty {
                     url = makeRequestUrl(domain: MarvelAccount.serverURL,
                                          path: MarvelAccount.requestURL,
                                          queryItems: [URLQueryItem(name: "nameStartsWith", value: str)]
                     )
                 } else {
-                    url = url_marvel
+                    url = urlMarvel
                 }
-                getCharacterList(from: url)
+                if let url = url {
+                    getCharacterList(from: url)
+                }
             })
     }
     
-    private func makeRequestUrl(domain: String, path: String, queryItems: [URLQueryItem]?) -> URL {
+    func loadData() {
+        alertType = nil
+        if let url = urlMarvel {
+            getCharacterList(from: url)
+        }
+    }
+    
+    private func makeRequestUrl(domain: String, path: String, queryItems: [URLQueryItem]?) -> URL? {
         guard let baseURL = URL(string: domain) else {
-            fatalError("Cannot create URL.")
+            alertType = .url
+            showingAlert = true
+            return nil
         }
         let requestURL: URL
         requestURL = path.isEmpty ? baseURL : baseURL.appendingPathComponent(path)
@@ -67,12 +92,14 @@ final class ModelData: ObservableObject {
         var urlComponents = URLComponents(string: requestURL.absoluteString)
         urlComponents?.queryItems = queryItemsLocal
         guard let newRequestURL = urlComponents?.url else {
-            fatalError("Cannot create URL with query items.")
+            alertType = .token
+            showingAlert = true
+            return nil
         }
         return newRequestURL
     }
     
     func makeMarvelRequestUrl(from path: String) -> String {
-        makeRequestUrl(domain: path, path: "", queryItems: nil).absoluteString
+        makeRequestUrl(domain: path, path: "", queryItems: nil)?.absoluteString ?? ""
     }
 }

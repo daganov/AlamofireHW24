@@ -12,14 +12,33 @@ struct CharacterList: View {
 
     var body: some View {
         NavigationView {
-            List(modelData.characters, id: \.id) { character in
-                CharacterRow(character: character)
+            VStack {
+                if modelData.alertType != nil {
+                    Label("Проблемы с получением данных", systemImage: "wifi.slash")
+                    
+                    Button("Обновить") {
+                        modelData.loadData()
+                    }
+                    .padding(8)
+                    .background(Color("AccentColor"))
+                    .foregroundColor(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                    
+                    Spacer()
+                } else {
+                    List(modelData.characters, id: \.id) { character in
+                        CharacterRow(character: character)
+                    }
+                    .navigationTitle("Characters")
+                    .searchable(text: $modelData.searchText,
+                                placement: .navigationBarDrawer(displayMode: .automatic),
+                                prompt: "Найти супергероя"
+                    )
+                }
             }
-            .navigationTitle("Characters")
-            .searchable(text: $modelData.searchText,
-                        placement: .navigationBarDrawer(displayMode: .automatic),
-                        prompt: "Найти супергероя"
-            )
+        }
+        .alert(isPresented: $modelData.showingAlert) {
+            Alert(title: Text(modelData.alertType?.rawValue ?? ""))
         }
     }
 }
