@@ -24,7 +24,7 @@ final class ModelData: ObservableObject {
         case token = "Проблема с доступом к данным"
     }
     
-    fileprivate func getCharacterList(from url_marvel: URL) {
+    fileprivate func getCharacterList(from url_marvel: URL, clear: Bool = true) {
         let request = AF.request(url_marvel)
         request.responseDecodable(of: MarvelResponse.self) { [self] data in
             guard let item = data.value?.data.results else {
@@ -33,7 +33,11 @@ final class ModelData: ObservableObject {
                 characters.removeAll()
                 return
             }
-            characters = item
+            if clear {
+                characters = item
+            } else {
+                characters.append(contentsOf: item)
+            }
         }
     }
     
@@ -62,10 +66,25 @@ final class ModelData: ObservableObject {
             })
     }
     
-    func loadData() {
+    func loadData(offset: Bool = false) {
         alertType = nil
-        if let url = urlMarvel {
-            getCharacterList(from: url)
+        let url: URL?
+        if !offset {
+            url = urlMarvel
+        } else {
+            url = makeRequestUrl(domain: MarvelAccount.serverURL,
+                                 path: MarvelAccount.requestURL,
+                                 queryItems: [URLQueryItem(name: "offset", value: String(characters.count))]
+            )
+        }
+        if let url = url {
+            getCharacterList(from: url, clear: !offset)
+        }
+    }
+    
+    func loadMoreIfNeeded(_ item: Character) {
+        if item == characters.last {
+            loadData(offset: true)
         }
     }
     

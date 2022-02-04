@@ -28,6 +28,9 @@ struct CharacterList: View {
                 } else {
                     List(modelData.characters, id: \.id) { character in
                         CharacterRow(character: character)
+                            .onAppear {
+                                modelData.loadMoreIfNeeded(character)
+                            }
                     }
                     .navigationTitle("Characters")
                     .searchable(text: $modelData.searchText,
