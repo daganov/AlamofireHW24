@@ -16,7 +16,11 @@ struct Characters: Decodable {
     let results: [Character]
 }
 
-struct Character: Decodable {
+struct Character: Decodable, Equatable {
+    static func == (lhs: Character, rhs: Character) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     let id: Int
     let name: String
     let description: String
