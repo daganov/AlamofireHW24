@@ -24,8 +24,8 @@ final class ModelData: ObservableObject {
         case token = "Проблема с доступом к данным"
     }
     
-    fileprivate func getCharacterList(from url_marvel: URL, clear: Bool = true) {
-        let request = AF.request(url_marvel)
+    fileprivate func getCharacterList(from urlMarvel: URL, clear: Bool = true) {
+        let request = AF.request(urlMarvel)
         request.responseDecodable(of: MarvelResponse.self) { [self] data in
             guard let item = data.value?.data.results else {
                 alertType = .connection
